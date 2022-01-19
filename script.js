@@ -471,7 +471,7 @@ function checkGuess(begin) {
     }
 
     if (guess_counter == 6 && correct == false) {
-        alert("Sorry! Your last guess was incorrect and you have used up all of your tries :(");
+        alert("Sorry! Your last guess was incorrect and you have used up all of your tries :( The correct word was " + target);
     }
 }
 
