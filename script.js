@@ -1,0 +1,490 @@
+console.log('[INFO]: script start')
+
+words_list = [
+    "Abuse",
+    "Adult",
+    "Agent",
+    "Anger",
+    "Award",
+    "Beach",
+    "Birth",
+    "Block",
+    "Board",
+    "Brain",
+    "Bread",
+    "Break",
+    "Brown",
+    "Buyer",
+    "Cause",
+    "Chain",
+    "Chair",
+    "Chest",
+    "Chief",
+    "Child",
+    "China",
+    "Claim",
+    "Clock",
+    "Coach",
+    "Coast",
+    "Court",
+    "Cover",
+    "Cream",
+    "Crime",
+    "Crowd",
+    "Crown",
+    "Dance",
+    "Death",
+    "Depth",
+    "Doubt",
+    "Draft",
+    "Dream",
+    "Drink",
+    "Drive",
+    "Earth",
+    "Entry",
+    "Faith",
+    "Fault",
+    "Field",
+    "Fight",
+    "Final",
+    "Focus",
+    "Force",
+    "Frame",
+    "Frank",
+    "Front",
+    "Fruit",
+    "Grant",
+    "Group",
+    "Guide",
+    "Heart",
+    "Henry",
+    "Horse",
+    "Hotel",
+    "House",
+    "Image",
+    "Index",
+    "Input",
+    "Jones",
+    "Judge",
+    "Knife",
+    "Laura",
+    "Layer",
+    "Level",
+    "Lewis",
+    "Light",
+    "Limit",
+    "Lunch",
+    "Major",
+    "March",
+    "Match",
+    "Metal",
+    "Model",
+    "Money",
+    "Month",
+    "Motor",
+    "Mouth",
+    "Music",
+    "Night",
+    "Noise",
+    "North",
+    "Novel",
+    "Nurse",
+    "Offer",
+    "Order",
+    "Other",
+    "Owner",
+    "Panel",
+    "Paper",
+    "Party",
+    "Peace",
+    "Peter",
+    "Phase",
+    "Phone",
+    "Piece",
+    "Pilot",
+    "Pitch",
+    "Place",
+    "Plane",
+    "Plant",
+    "Plate",
+    "Point",
+    "Pound",
+    "Power",
+    "Press",
+    "Price",
+    "Pride",
+    "Prize",
+    "Proof",
+    "Queen",
+    "Radio",
+    "Range",
+    "Ratio",
+    "Reply",
+    "Right",
+    "River",
+    "Round",
+    "Route",
+    "Rugby",
+    "Scale",
+    "Scene",
+    "Scope",
+    "Score",
+    "Sense",
+    "Shape",
+    "Share",
+    "Sheep",
+    "Sheet",
+    "Shift",
+    "Shirt",
+    "Shock",
+    "Sight",
+    "Simon",
+    "Skill",
+    "Sleep",
+    "Smile",
+    "Smith",
+    "Smoke",
+    "Sound",
+    "South",
+    "Space",
+    "Speed",
+    "Spite",
+    "Sport",
+    "Squad",
+    "Staff",
+    "Stage",
+    "Start",
+    "State",
+    "Steam",
+    "Steel",
+    "Stock",
+    "Stone",
+    "Store",
+    "Study",
+    "Stuff",
+    "Style",
+    "Sugar",
+    "Table",
+    "Taste",
+    "Terry",
+    "Theme",
+    "Thing",
+    "Title",
+    "Total",
+    "Touch",
+    "Tower",
+    "Track",
+    "Trade",
+    "Train",
+    "Trend",
+    "Trial",
+    "Trust",
+    "Truth",
+    "Uncle",
+    "Union",
+    "Unity",
+    "Value",
+    "Video",
+    "Visit",
+    "Voice",
+    "Waste",
+    "Watch",
+    "Water",
+    "While",
+    "White",
+    "Whole",
+    "Woman",
+    "World",
+    "Youth",
+    "Admit",
+    "Adopt",
+    "Agree",
+    "Allow",
+    "Alter",
+    "Apply",
+    "Argue",
+    "Arise",
+    "Avoid",
+    "Begin",
+    "Blame",
+    "Break",
+    "Bring",
+    "Build",
+    "Burst",
+    "Carry",
+    "Catch",
+    "Cause",
+    "Check",
+    "Claim",
+    "Clean",
+    "Clear",
+    "Climb",
+    "Close",
+    "Count",
+    "Cover",
+    "Cross",
+    "Dance",
+    "Doubt",
+    "Drink",
+    "Drive",
+    "Enjoy",
+    "Enter",
+    "Exist",
+    "Fight",
+    "Focus",
+    "Force",
+    "Guess",
+    "Imply",
+    "Issue",
+    "Judge",
+    "Laugh",
+    "Learn",
+    "Leave",
+    "Let’s",
+    "Limit",
+    "Marry",
+    "Match",
+    "Occur",
+    "Offer",
+    "Order",
+    "Phone",
+    "Place",
+    "Point",
+    "Press",
+    "Prove",
+    "Raise",
+    "Reach",
+    "Refer",
+    "Relax",
+    "Serve",
+    "Shall",
+    "Share",
+    "Shift",
+    "Shoot",
+    "Sleep",
+    "Solve",
+    "Sound",
+    "Speak",
+    "Spend",
+    "Split",
+    "Stand",
+    "Start",
+    "State",
+    "Stick",
+    "Study",
+    "Teach",
+    "Thank",
+    "Think",
+    "Throw",
+    "Touch",
+    "Train",
+    "Treat",
+    "Trust",
+    "Visit",
+    "Voice",
+    "Waste",
+    "Watch",
+    "Worry",
+    "Would",
+    "Write",
+    "Above",
+    "Acute",
+    "Alive",
+    "Alone",
+    "Angry",
+    "Aware",
+    "Awful",
+    "Basic",
+    "Black",
+    "Blind",
+    "Brave",
+    "Brief",
+    "Broad",
+    "Brown",
+    "Cheap",
+    "Chief",
+    "Civil",
+    "Clean",
+    "Clear",
+    "Close",
+    "Crazy",
+    "Daily",
+    "Dirty",
+    "Early",
+    "Empty",
+    "Equal",
+    "Exact",
+    "Extra",
+    "Faint",
+    "FALSE",
+    "Fifth",
+    "Final",
+    "First",
+    "Fresh",
+    "Front",
+    "Funny",
+    "Giant",
+    "Grand",
+    "Great",
+    "Green",
+    "Gross",
+    "Happy",
+    "Harsh",
+    "Heavy",
+    "Human",
+    "Ideal",
+    "Inner",
+    "Joint",
+    "Large",
+    "Legal",
+    "Level",
+    "Light",
+    "Local",
+    "Loose",
+    "Lucky",
+    "Magic",
+    "Major",
+    "Minor",
+    "Moral",
+    "Naked",
+    "Nasty",
+    "Naval",
+    "Other",
+    "Outer",
+    "Plain",
+    "Prime",
+    "Prior",
+    "Proud",
+    "Quick",
+    "Quiet",
+    "Rapid",
+    "Ready",
+    "Right",
+    "Roman",
+    "Rough",
+    "Round",
+    "Royal",
+    "Rural",
+    "Sharp",
+    "Sheer",
+    "Short",
+    "Silly",
+    "Sixth",
+    "Small",
+    "Smart",
+    "Solid",
+    "Sorry",
+    "Spare",
+    "Steep",
+    "Still",
+    "Super",
+    "Sweet",
+    "Thick",
+    "Third",
+    "Tight",
+    "Total",
+    "Tough",
+    "Upper",
+    "Upset",
+    "Urban",
+    "Usual",
+    "Vague",
+    "Valid",
+    "Vital",
+    "White",
+    "Whole",
+    "Wrong",
+    "Young"
+]
+
+var target = "";
+
+var guess_counter = 0;
+
+function removeWordsWithDuplicates() {
+    for (var i = 0; i < words_list.length; i++) {
+        var curr = words_list[i];
+        var set = new Set();
+        for (var j = 0; j < curr.length; j++) {
+            var char = curr[j];
+            if (set.has(char)) {
+                words_list.splice(i, 1);
+            }
+            else {
+                set.add(char);
+            }
+        }
+    }
+}
+
+function pickRandomWord() {
+    var random_index = Math.floor(Math.random() * words_list.length);
+    target = words_list[random_index].toUpperCase();
+    console.log('[DEBUG]: random word is:', target)
+}
+
+function checkGuess(begin) {
+    correct = false;
+    guess_counter = guess_counter + 1;
+    console.log('[INFO]: checking guess')
+    var base = parseInt(begin);
+    var name1 = "letter" + begin;
+    var name2 = "letter" + (base + 1).toString();
+    var name3 = "letter" + (base + 2).toString();
+    var name4 = "letter" + (base + 3).toString();
+    var name5 = "letter" + (base + 4).toString();
+    var letter1 = $(`input[name=${name1}]`).val()
+    var letter2 = $(`input[name=${name2}]`).val()
+    var letter3 = $(`input[name=${name3}]`).val()
+    var letter4 = $(`input[name=${name4}]`).val()
+    var letter5 = $(`input[name=${name5}]`).val()
+    guess = (letter1 + letter2 + letter3 + letter4 + letter5).toUpperCase();
+    console.log('[INFO]: guess is', guess)
+    if (guess.length != 5) {
+        alert("Invalid guess, please try again!")
+        guess_counter = guess_counter - 1;
+    }
+    else if (guess == target) {
+        alert("Correct! The mystery word was: " + target);
+        correct = true;
+        for (var i = 0; i < guess.length; i++) {
+            var temp = "letter" + (base + i).toString();
+            $(`input[name=${temp}]`).css("background-color", "green");
+        }
+    }
+    else {
+        for (var i = 0; i < guess.length; i++) {
+            var curr = guess[i].toUpperCase();
+            var temp = "letter" + (base + i).toString();
+            if (target.includes(curr)) {
+                if (target[i] == curr) {
+                    $(`input[name=${temp}]`).css("background-color", "green");
+                }
+                else {
+                    $(`input[name=${temp}]`).css("background-color", "orange");
+                }
+            }
+            else {
+                $(`input[name=${temp}]`).css("background-color", "grey");
+            }
+        }
+    }
+
+    if (guess_counter == 6 && correct == false) {
+        alert("Sorry! Your last guess was incorrect and you have used up all of your tries :(");
+    }
+}
+
+$(document).ready(function () {
+
+    $('.letter').keyup(function (event) {
+        var keycode = event.keyCode;
+        console.log(keycode)
+        if (keycode != '8' && keycode != '9' && keycode != '13' && keycode != '16' && keycode != '37' && keycode != '39') {
+            $(this).next().focus();
+        }
+    });
+
+    removeWordsWithDuplicates();
+    pickRandomWord();
+});

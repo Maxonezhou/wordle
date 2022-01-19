@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title> Wordle </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <div class="header">
+            <h1 class="title">Wordle</h1>
+            <div class="title-desc">
+                <p>You have six tries to guess the secret five letter word</p>
+                <p>Correct letters in the correct location are highlighted in Green</p>
+                <p>Correct letters in the wrong location are highlighted in Yellow</p>
+                <p>Incorrect letters are highlighted in grey</p>
+                <p>Good Luck!</p>
+            </div>
+        </div>
+        <div class="guesses">
+            <div class="line">
+                <input type='text' name='letter1' class='letter' maxlength='1'> 
+                <input type='text' name='letter2' class='letter' maxlength='1'>
+                <input type='text' name='letter3' class='letter' maxlength='1'>
+                <input type='text' name='letter4' class='letter' maxlength='1'>
+                <input type='text' name='letter5' class='letter' maxlength='1'>
+                <button class="guess-btn" onclick="checkGuess('1')">Check guess #1!</button>
+            </div>
+            <div class="line">
+                <input type='text' name='letter6' class='letter' maxlength='1'> 
+                <input type='text' name='letter7' class='letter' maxlength='1'>
+                <input type='text' name='letter8' class='letter' maxlength='1'>
+                <input type='text' name='letter9' class='letter' maxlength='1'>
+                <input type='text' name='letter10' class='letter' maxlength='1'>
+                <button class="guess-btn" onclick="checkGuess('6')">Check guess #2!</button>
+            </div>
+            <div class="line">
+                <input type='text' name='letter11' class='letter' maxlength='1'> 
+                <input type='text' name='letter12' class='letter' maxlength='1'>
+                <input type='text' name='letter13' class='letter' maxlength='1'>
+                <input type='text' name='letter14' class='letter' maxlength='1'>
+                <input type='text' name='letter15' class='letter' maxlength='1'>
+                <button class="guess-btn" onclick="checkGuess('11')">Check guess #3!</button>
+            </div>
+            <div class="line">
+                <input type='text' name='letter16' class='letter' maxlength='1'> 
+                <input type='text' name='letter17' class='letter' maxlength='1'>
+                <input type='text' name='letter18' class='letter' maxlength='1'>
+                <input type='text' name='letter19' class='letter' maxlength='1'>
+                <input type='text' name='letter20' class='letter' maxlength='1'>
+                <button class="guess-btn" onclick="checkGuess('16')">Check guess #4!</button>
+            </div>  
+            <div class="line">
+                <input type='text' name='letter21' class='letter' maxlength='1'> 
+                <input type='text' name='letter22' class='letter' maxlength='1'>
+                <input type='text' name='letter23' class='letter' maxlength='1'>
+                <input type='text' name='letter24' class='letter' maxlength='1'>
+                <input type='text' name='letter25' class='letter' maxlength='1'>
+                <button class="guess-btn" onclick="checkGuess('21')">Check guess #5!</button>
+            </div>  
+            <div class="line">
+                <input type='text' name='letter26' class='letter' maxlength='1'> 
+                <input type='text' name='letter27' class='letter' maxlength='1'>
+                <input type='text' name='letter28' class='letter' maxlength='1'>
+                <input type='text' name='letter29' class='letter' maxlength='1'>
+                <input type='text' name='letter30' class='letter' maxlength='1'>
+                <button class="guess-btn" onclick="checkGuess('26')">Check guess #6!</button>
+            </div>    
+        </div>
+        <script src="./script.js"></script>
+    </body>
+</html>
