@@ -420,7 +420,7 @@ function removeWordsWithDuplicates() {
 function pickRandomWord() {
     var random_index = Math.floor(Math.random() * words_list.length);
     target = words_list[random_index].toUpperCase();
-    console.log('[DEBUG]: random word is:', target)
+    //console.log('[DEBUG]: random word is:', target)
 }
 
 function checkGuess(begin) {
